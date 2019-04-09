@@ -92,14 +92,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------------+----------+----------+----------+----------+----------|          |    |          |----------+----------+----------+----------+----------|------------|
    * |   SHIFT    |    Z     |    X     |    C     |    V     |    B     |    8     |    |          |    N     |    M     |    ,     |    .     |    /     |   SHIFT    |
    * '------------+----------+----------+----------+----------+---------------------'    '---------------------+----------+----------+----------+----------+------------'
-   *   |   ALT    |    `     |    '     |    N     |    M     |                                                |   LEFT   |   RIGHT  |          | TO(MENU) | MO(MEDIA)|
+   *   |   ALT    |    `     |    '     |    UP    |   DOWN   |                                                |   LEFT   |   RIGHT  |          | TO(MENU) | MO(MEDIA)|
    *   '------------------------------------------------------'                                                '------------------------------------------------------'
    *                                                          .---------------------.    .---------------------.
    *                                                          |  ENTER   |    0     |    |   PGUP   |  PGDOWN  |
    *                                               .----------+----------+----------|    |----------+----------+----------.
-   *                                               |          |          |   F14    |    |          |          |  LT(     |
-   *                                               |  SPACE   |  BSPACE  |----------|    |----------|  DELETE  |  SYMWIN, |
-   *                                               |          |          |   CTRL   |    |    F2    |          |  ENTER)  |
+   *                                               |          |  LT(     |   F14    |    |          |          |  LT(     |
+   *                                               |  SPACE   |  SYMWIN, |----------|    |----------|  DELETE  |  SYMWIN, |
+   *                                               |          |  BSPACE) |   CTRL   |    |    F2    |          |  ENTER)  |
    *                                               '--------------------------------'    '--------------------------------'
    */
   [GAMING] = LAYOUT_ergodox(
@@ -108,10 +108,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,             KC_Q,               KC_W,               KC_E,               KC_R,               KC_T,               KC_7,
       XXXXX,              KC_A,               KC_S,               KC_D,               KC_F,               KC_G,
       KC_LSHIFT,          KC_Z,               KC_X,               KC_C,               KC_V,               KC_B,               KC_8,
-      KC_LALT,            KC_GRAVE,           KC_QUOTE,           KC_N,               KC_M,
+      KC_LALT,            KC_GRAVE,           KC_QUOTE,           KC_UP,              KC_DOWN,
       KC_ENTER,           KC_0,
       KC_F14,
-      KC_SPACE,           KC_BSPACE,          KC_LCTL,
+      KC_SPACE,           LT(SYMWIN,KC_BSPC), KC_LCTL,
       // right hand
       XXXXX,              KC_6,               KC_7,               KC_8,               KC_9,               KC_0,               XXXXX,
       XXXXX,              KC_Y,               KC_U,               KC_I,               KC_O,               KC_P,               KC_BSLASH,
