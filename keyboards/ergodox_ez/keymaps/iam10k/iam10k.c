@@ -4,7 +4,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * .------------------------------------------------------------------------------.    .------------------------------------------------------------------------------.
    * |            |    F1    |    F2    |    F3    |    F4    |    F5    |          |    |          |    F6    |    F7    |    F8    |    F9    |   F10    |    F11     |
    * |------------+----------+----------+----------+----------+----------+----------|    |----------+----------+----------+----------+----------+----------+------------|
-   * |            |   TO(1)  |   TO(2)  |   TO(3)  |   TO(4)  |   TO(5)  |          |    |          |   TO(6)  |   TO(7)  |   TO(8)  |   TO(9)  |  TO(10)  |    F12     |
+   * |            |   TO(1)  |   TO(2)  |   TO(3)  |   TO(4)  |   TO(5)  |          |    |          |   TO(6)  |   TO(7)  |          |          |          |    F12     |
    * |------------+----------+----------+----------+----------+----------|          |    |          |----------+----------+----------+----------+----------+------------|
    * |            |          |          |          |          |          |----------|    |----------|          |          |          |          |          |            |
    * |------------+----------+----------+----------+----------+----------|          |    |          |----------+----------+----------+----------+----------+------------|
@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_SPACE,           KC_BSPACE,          XXXXX,
       // right hand
       XXXXX,              KC_F6,              KC_F7,              KC_F8,              KC_F9,              KC_F10,             KC_F11,
-      XXXXX,              TO(6),              TO(7),              TO(8),              TO(9),              TO(10),             KC_F12,
+      XXXXX,              TO(6),              TO(7),              XXXXX,              XXXXX,              XXXXX,              KC_F12,
       XXXXX,              XXXXX,              XXXXX,              XXXXX,              XXXXX,              XXXXX,
       XXXXX,              XXXXX,              XXXXX,              XXXXX,              XXXXX,              XXXXX,              XXXXX,
       KC_LEFT,            KC_RIGHT,           XXXXX,              XXXXX,              XXXXX,
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *   |   CTRL   | CTRL ALT |          |    UP    |   DOWN   |                                                |   LEFT   |   RIGHT  |          | TO(MENU) |MO(SYMWIN)|
    *   '------------------------------------------------------'                                                '------------------------------------------------------'
    *                                                          .---------------------.    .---------------------.
-   *                                                          |          |          |    |  INSERT  |  TG(4)   |
+   *                                                          |          |          |    |  INSERT  |          |
    *                                               .----------+----------+----------|    |----------+----------+----------.
    *                                               |  LT(     |          | CMD/WIN  |    | CMD/WIN  |          |  LT(     |
    *                                               |  SYMWIN, |  BSPACE  |----------|    |----------|  DELETE  |  SYMWIN, |
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_H,               KC_J,               KC_K,               KC_L,               KC_SCOLON,          KC_QUOTE,
       LCA(KC_L),          KC_N,               KC_M,               KC_COMMA,           KC_DOT,             KC_SLASH,           KC_RSHIFT,
       KC_LEFT,            KC_RIGHT,           XXXXX,              TO(MENU),           MO(MEDIA),
-      KC_INS,             TG(MACLAYER),
+      KC_INS,             XXXXX,
       KC_LGUI,
       KC_RCTRL,           KC_DELETE,          LT(SYMWIN,KC_ENT)
   ),
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------------+----------+----------+----------+----------+----------|          |    |          |----------+----------+----------+----------+----------|------------|
    * |   SHIFT    |    Z     |    X     |    C     |    V     |    B     |    8     |    |          |    N     |    M     |    ,     |    .     |    /     |   SHIFT    |
    * '------------+----------+----------+----------+----------+---------------------'    '---------------------+----------+----------+----------+----------+------------'
-   *   |   ALT    |    `     |    '     |    UP    |   DOWN   |                                                |   LEFT   |   RIGHT  |          | TO(MENU) | MO(MEDIA)|
+   *   |   ALT    |    `     |    '     |    UP    |   DOWN   |                                                |   LEFT   |   RIGHT  | TO(MAC)  | TO(MENU) | MO(MEDIA)|
    *   '------------------------------------------------------'                                                '------------------------------------------------------'
    *                                                          .---------------------.    .---------------------.
    *                                                          |  ENTER   |    0     |    |   PGUP   |  PGDOWN  |
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXX,              KC_Y,               KC_U,               KC_I,               KC_O,               KC_P,               KC_BSLASH,
       KC_H,               KC_J,               KC_K,               KC_L,               KC_SCOLON,          KC_QUOTE,
       XXXXX,              KC_N,               KC_M,               KC_COMMA,           KC_DOT,             KC_SLASH,           KC_RSHIFT,
-      KC_LEFT,            KC_RIGHT,           XXXXX,              TO(MENU),           MO(MEDIA),
+      KC_LEFT,            KC_RIGHT,           TO(MACLAYER),       TO(MENU),           MO(MEDIA),
       KC_PGUP,            KC_PGDOWN,
       XXXXX,
       KC_F2,              KC_DELETE,          LT(SYMWIN,KC_ENT)
