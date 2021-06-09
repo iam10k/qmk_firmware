@@ -17,7 +17,7 @@ UNICODE_ENABLE   = no  # Unicode
 SWAP_HANDS_ENABLE= no   # Allow swapping hands of keyboard
 
 RGB_MATRIX_ENABLE = no # enable later
-DEBOUNCE_TYPE = sym_g
+DEBOUNCE_TYPE = sym_defer_g
 
 # project specific files
 SRC += matrix.c \

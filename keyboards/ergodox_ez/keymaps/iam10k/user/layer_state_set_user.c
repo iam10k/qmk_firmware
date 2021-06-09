@@ -28,21 +28,36 @@ uint32_t layer_state_set_user(uint32_t state) {
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_2);
         #endif
         break;
-      case SYMWIN:
+      case MACLAYER:
         ergodox_right_led_3_on();
+        #ifdef RGBLIGHT_COLOR_LAYER_3
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_3);
+        #endif
+        break;
+      case SYMWIN:
+        ergodox_right_led_1_on();
+        ergodox_right_led_2_on();
+        #ifdef RGBLIGHT_COLOR_LAYER_3
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_3);
+        #endif
+        break;
+      case SYMMAC:
+        ergodox_right_led_1_on();
+        ergodox_right_led_2_on();
         #ifdef RGBLIGHT_COLOR_LAYER_3
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_3);
         #endif
         break;
       case MEDIA:
         ergodox_right_led_1_on();
-        ergodox_right_led_2_on();
+        ergodox_right_led_3_on();
         #ifdef RGBLIGHT_COLOR_LAYER_4
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_4);
         #endif
         break;
       case FIRMWARE:
         ergodox_right_led_1_on();
+        ergodox_right_led_2_on();
         ergodox_right_led_3_on();
         #ifdef RGBLIGHT_COLOR_LAYER_5
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_5);
